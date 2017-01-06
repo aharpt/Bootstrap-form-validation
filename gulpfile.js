@@ -1,2 +1,13 @@
 var gulp = require("gulp");
 var jslint = require("gulp-jslint");
+
+
+gulp.task("jslint", function () {
+  return gulp.src("./script.js")
+  .pipe(jslint({
+    browser: true,
+    devel: true,
+    global: ["window, console, $"];
+  }))
+  .pipe(jslint.reporter("default"));
+});
