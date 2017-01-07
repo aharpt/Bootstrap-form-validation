@@ -12,11 +12,11 @@ $(".btn-default").click(function () {
   "use strict";
   if ($("#inputEmail3").val().length < 1) {
     $("#email-label").parent(".form-group").addClass("has-error");
-    $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not the required length. Please try again.</span>");
+    $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not the required length.</span>");
     console.log("#email-label length less than 1");
   } else if (!re.test($("#inputEmail3").val())) {
     $("#email-label").parent(".form-group").addClass("has-error");
-    $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not formatted like an email. Please try again.</span>");
+    $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not formatted like an email.</span>");
     console.log("#email-label is not formatted like an email");
   }
   console.log("button default clicked");
@@ -27,7 +27,7 @@ $(".btn-default").click(function () {
     "use strict";
     if ($("#email-label").parent(".form-group").hasClass("has-error")) {
       if ($("#inputEmail3").val().length > 0 && !re.test($("#inputEmail3").val())) {
-        $("#email-label").next(".col-sm-10").children(".error-message").text("Your provided email is not formatted like an email. Please try again.");
+        $("#email-label").next(".col-sm-10").children(".error-message").text("Your provided email is not formatted like an email.");
         console.log("keyup changing error-message text");
       } else if ($("#inputEmail3").val().length > 0 && re.test($("#inputEmail3").val())) {
         $("#email-label").parent(".form-group").removeClass("has-error");
