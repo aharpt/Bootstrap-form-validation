@@ -6,10 +6,22 @@
 
 $(".btn-default").click(function () {
   "use strict";
-  if ($("#email-label").val().length < 1) {
+  if ($("#inputEmail3").val().length < 1) {
     $("#email-label").parent(".form-group").addClass("has-error");
     $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not the required length. Please try again.</span>");
     console.log("#email-label length less than 1");
   }
   console.log("button default clicked");
 });
+
+
+  $("#inputEmail3").keyup( function () {
+    "use strict";
+    if ($("#email-label").parent(".form-group").hasClass("has-error")) {
+      if ($("#inputEmail3").val().length > 1) {
+        $("#email-label").parent(".form-group").removeClass("has-error");
+        $("#email-label").parent(".form-group").addClass("has-success");
+        $("#email-label").next(".col-sm-10").children(".error-message").remove();
+      }
+    }
+  });
