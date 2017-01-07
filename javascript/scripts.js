@@ -39,33 +39,6 @@ $(".btn-default").click(function () {
   });
 
 
-
-
-// if email is not formatted like an email throw an error
-
-// $(".btn-default").click(function () {
-//   "use strict";
-//   if (!re.test($("#email-label").val())) {
-//     $("#email-label").parent(".form-group").addClass("has-error");
-//     $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not formatted like an email. Please try again.</span>");
-//     console.log("#email-label is not formatted like an email");
-//   }
-//   console.log("button default clicked (email format incorrect/correct)");
-// });
-//
-//
-//   $("#inputEmail3").keyup( function () {
-//     "use strict";
-//     if ($("#email-label").parent(".form-group").hasClass("has-error")) {
-//       if (re.test($("#email-label").val())) {
-//         $("#email-label").parent(".form-group").removeClass("has-error");
-//         $("#email-label").parent(".form-group").addClass("has-success");
-//         $("#email-label").next(".col-sm-10").children(".error-message").remove();
-//       }
-//     }
-//   });
-
-
 // if Password if not longer than six characters throw an error
 
 $(".btn-default").click(function () {
