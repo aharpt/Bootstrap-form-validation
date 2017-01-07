@@ -2,3 +2,7 @@
   border-radius: 0;
   margin-bottom: 0;
 }
+
+.error-message {
+  color: #a94442;
+}
