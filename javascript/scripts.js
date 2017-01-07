@@ -26,3 +26,7 @@ $(".btn-default").click(function () {
       }
     }
   });
+
+
+  // Evaluating a regular expression against a email input's value taken from SitePoint https://www.sitepoint.com/javascript-validate-email-address-regex/
+  var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
