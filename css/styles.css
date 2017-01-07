@@ -3,6 +3,27 @@
   margin-bottom: 0;
 }
 
+.jumbotron .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.jumbotron h3 {
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.col-lg-6 {
+  margin: auto;
+}
+
 .error-message {
   color: #a94442;
 }
