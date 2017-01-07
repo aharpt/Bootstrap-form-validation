@@ -8,13 +8,15 @@
 // Using a regular expression in JavaScript http://stackoverflow.com/questions/46155/validate-email-address-in-javascript Stack Overflow MIT License
 var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-$(".btn-default").click(function () {
+$(".btn-default").click(function (event) {
   "use strict";
   if ($("#inputEmail3").val().length < 1) {
+    event.preventDefault();
     $("#email-label").parent(".form-group").addClass("has-error");
     $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not the required length.</span>");
     console.log("#email-label length less than 1");
   } else if (!re.test($("#inputEmail3").val())) {
+    event.preventDefault();
     $("#email-label").parent(".form-group").addClass("has-error");
     $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not formatted like an email.</span>");
     console.log("#email-label is not formatted like an email");
@@ -23,10 +25,11 @@ $(".btn-default").click(function () {
 });
 
 
-  $("#inputEmail3").keyup( function () {
+  $("#inputEmail3").keyup( function (event) {
     "use strict";
     if ($("#email-label").parent(".form-group").hasClass("has-error")) {
       if ($("#inputEmail3").val().length > 0 && !re.test($("#inputEmail3").val())) {
+        event.preventDefault();
         $("#email-label").next(".col-sm-10").children(".error-message").text("Your provided email is not formatted like an email.");
         console.log("keyup changing error-message text");
       } else if ($("#inputEmail3").val().length > 0 && re.test($("#inputEmail3").val())) {
@@ -41,9 +44,10 @@ $(".btn-default").click(function () {
 
 // if Password if not longer than six characters throw an error
 
-$(".btn-default").click(function () {
+$(".btn-default").click(function (event) {
   "use strict";
   if ($("#inputPassword3").val().length < 6) {
+    event.preventDefault();
     $("#password-label").parent(".form-group").addClass("has-error");
     $("#password-label").next(".col-sm-10").append("</span><span class='error-message'>Please type in a password that is longer than five characters.</span>");
     console.log("#password-label length less than 1");
