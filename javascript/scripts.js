@@ -32,6 +32,7 @@ $(".btn-default").click(function (event) {
       if ($("#inputEmail3").val().length < 1 && !re.test($("#inputEmail3").val())) {
         event.preventDefault();
         $("#email-label").parent(".form-group").removeClass("has-error has-success").addClass("has-error");
+        $("#email-label").next(".col-sm-10").children("span").remove();
         $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not the required length.</span>");
         console.log("#email-label length less than 1 character on keyup");
 
