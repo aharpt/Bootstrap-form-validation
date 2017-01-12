@@ -38,7 +38,7 @@ $(".btn").click(function (event) {
         event.preventDefault();
         $("#email-label").parent(".form-group").removeClass("has-error has-success").addClass("has-error");
         $("#email-label").next(".col-sm-10").children(".error-message").remove();
-        $("#email-label").next(".col-sm-10").append("<span class='error-message'>Please provide a valid email</span>");
+        $("#email-label").next(".col-sm-10").append("<span class='error-message'>Please provide a valid email.</span>");
         console.log("keyup changing error-message text");
       } else if ($("#inputEmail3").val().length > 0 && re.test($("#inputEmail3").val())) {
         $("#email-label").parent(".form-group").removeClass("has-error has-success");
