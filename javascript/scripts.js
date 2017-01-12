@@ -89,19 +89,3 @@ $(".btn").click(function (event) {
       }
     }
   });
-
-
-  // if all checks are successful, "gray" out the body and alert success message
-  // $("body").append("<div id='overlay'></div>");
-  //
-  // $(".btn-default").click(function () {
-  //   console.log("alert button clicked");
-  //   if (!$("#email-label").parent(".form-group").hasClass("has-error") && !$("#password-label").parent(".form-group").hasClass("has-error")) {
-  //     $("#overlay").append("<div class='alert alert-success' role='alert'>Congratulations! You have successfully signed in!</div>").show();
-  //     console.log("alert");
-  //   }
-  // });
-  //
-  // $("#overlay").click( function () {
-  //   $("#overlay").hide();
-  // });
