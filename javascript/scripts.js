@@ -14,12 +14,14 @@ $(".btn").click(function (event) {
   if ($("#inputEmail3").val().length < 1) {
     event.preventDefault();
     $("#email-label").parent(".form-group").addClass("has-error");
+    $("#email-label").next(".col-sm-10").children(".error-message").remove();
     $("#email-label").next(".col-sm-10").append("<span class='error-message'>Your provided email is not the required length.</span>");
     console.log("#email-label length less than 1");
   } else if (!re.test($("#inputEmail3").val())) {
     event.preventDefault();
     $("#email-label").parent(".form-group").addClass("has-error");
-    $("#email-label").next(".col-sm-10").children(".error-message").remove().append("<span class='error-message'>Please provide a valid email.</span>");
+    $("#email-label").next(".col-sm-10").children(".error-message").remove();
+    $("#email-label").next(".col-sm-10").append("<span class='error-message'>Please provide a valid email.</span>");
     console.log("#email-label is not formatted like an email");
   }
   console.log("button default clicked");
