@@ -70,6 +70,7 @@ $(".btn-default").click(function (event) {
       if ($("#inputPassword3").val().length < 6) {
         event.preventDefault();
         $("#password-label").parent(".form-group").addClass("has-error");
+        $("#password-label").next(".col-sm-10").children(".error-message").remove();
         $("#password-label").next(".col-sm-10").append("</span><span class='error-message'>Please type in a password that is longer than five characters.</span>");
         console.log("#password-label length less than 6 characters for keyup");
       }
