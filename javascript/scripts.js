@@ -8,7 +8,7 @@
 // Using a regular expression in JavaScript http://stackoverflow.com/questions/46155/validate-email-address-in-javascript Stack Overflow MIT License
 var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-$(".btn-default").click(function (event) {
+$(".btn").click(function (event) {
   "use strict";
   if ($("#inputEmail3").val().length < 1) {
     event.preventDefault();
@@ -51,7 +51,7 @@ $(".btn-default").click(function (event) {
 
 // if Password if not longer than six characters throw an error
 
-$(".btn-default").click(function (event) {
+$(".btn").click(function (event) {
   "use strict";
   if ($("#inputPassword3").val().length < 6) {
     event.preventDefault();
