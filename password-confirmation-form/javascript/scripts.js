@@ -9,7 +9,7 @@
 var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 var numOfClicks = 0;
 
-$(".btn").click(function (event) {
+$(".btn").click( function (event) {
   "use strict";
   if ($("#inputEmail3").val().length < 1) {
     event.preventDefault();
@@ -57,7 +57,7 @@ $(".btn").click(function (event) {
 
 // if Password if not longer than six characters throw an error
 
-$(".btn").click(function (event) {
+$(".btn").click( function (event) {
   "use strict";
     if ($("#inputPassword3").val().length < 6) {
       event.preventDefault();
@@ -93,7 +93,7 @@ $(".btn").click(function (event) {
 
   // confirm password
 
-  $(".btn").click(function (event) {
+  $(".btn").click( function (event) {
     "use strict";
     if ($("#inputConfirmPassword3").val() !== $("#inputPassword3").val()) {
       event.preventDefault();
