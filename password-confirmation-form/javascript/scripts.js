@@ -89,3 +89,6 @@ $(".btn").click(function (event) {
       }
     }
   });
+
+
+  // confirm password
