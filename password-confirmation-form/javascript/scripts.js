@@ -98,7 +98,7 @@ $(".btn").click(function (event) {
     if ($("#inputConfirmPassword3").val() !== $("#inputPassword3").val()) {
       event.preventDefault();
       $("#confirm-password-label").parent(".form-group").addClass("has-error");
-      // $("#confirm-password-label").next(".col-sm-10").children(".error-message").remove();
+      $("#confirm-password-label").next(".col-sm-10").children(".error-message").remove();
       $("#confirm-password-label").next(".col-sm-10").append("<span class='error-message'>Please type in a matching password.</span>");
       console.log("#confirm-password-label not equal to #input-password");
     }
@@ -107,21 +107,21 @@ $(".btn").click(function (event) {
   });
 
 
-    $("#inputPassword3").keyup( function (event) {
+    $("#inputConfirmPassword3").keyup( function (event) {
       "use strict";
       if (numOfClicks > 0) {
-        if ($("#inputPassword3").val().length < 6) {
+        if ($("#inputConfirmPassword3").val() !== $("#inputPassword3").val()) {
           event.preventDefault();
-          $("#password-label").parent(".form-group").addClass("has-error");
-          $("#password-label").next(".col-sm-10").children(".error-message").remove();
-          $("#password-label").next(".col-sm-10").append("</span><span class='error-message'>Please type in a password that is longer than five characters.</span>");
-          console.log("#password-label length less than 6 characters for keyup");
+          $("#confirm-password-label").parent(".form-group").addClass("has-error");
+          $("#confirm-password-label").next(".col-sm-10").children(".error-message").remove();
+          $("#confirm-password-label").next(".col-sm-10").append("</span><span class='error-message'>Please type in a password that is longer than five characters.</span>");
+          console.log("#confirm-password-label length less than 6 characters for keyup");
         }
-        if ($("#inputPassword3").val().length > 5) {
-          $("#password-label").parent(".form-group").removeClass("has-error has-success");
-          $("#password-label").parent(".form-group").addClass("has-success");
-          $("#password-label").next(".col-sm-10").children(".error-message").remove();
-          console.log("keyup removing has-error class and adding has-success for password. Also removing .error-message");
+        if ($("#inputConfirmPassword3").val() !== $("#inputPassword3").val()) {
+          $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success");
+          $("#confirm-password-label").parent(".form-group").addClass("has-success");
+          $("#confirm-password-label").next(".col-sm-10").children(".error-message").remove();
+          console.log("keyup removing has-error class and adding has-success for confirm-password. Also removing .error-message");
         }
       }
     });
