@@ -181,7 +181,3 @@ $("#inputPassword3").blur( function () {
     //     console.log("keyup removing has-error class and adding has-success for confirm-password. Also removing .error-message");
     //   }
     // });
-
-    $("#inputPassword3").keyup( function (event) {
-
-    });
