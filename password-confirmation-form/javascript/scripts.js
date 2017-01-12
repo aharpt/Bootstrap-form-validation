@@ -79,6 +79,13 @@ $(".btn").click( function (event) {
         $("#confirm-password-label").next(".col-sm-10").children(".error-message").remove();
         $("#confirm-password-label").next(".col-sm-10").append("</span><span class='error-message'>Please type in a matching password.</span>");
       }
+
+      if ($("#inputConfirmPassword3").val() === $("#inputPassword3").val()) {
+        $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success");
+        $("#confirm-password-label").parent(".form-group").addClass("has-success");
+        $("#confirm-password-label").next(".col-sm-10").children(".error-message").remove();
+      }
+
       if ($("#inputPassword3").val().length < 6) {
         event.preventDefault();
         $("#password-label").parent(".form-group").addClass("has-error");
