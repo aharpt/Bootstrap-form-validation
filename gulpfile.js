@@ -8,7 +8,7 @@ gulp.task("jslint", function () {
     browser: true,
     devel: true,
     global: ["window, console, $"],
-    for: true;
+    for: true
   }))
   .pipe(jslint.reporter("default"));
 });
