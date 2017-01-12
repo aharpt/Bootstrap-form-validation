@@ -3,7 +3,7 @@ var jslint = require("gulp-jslint");
 
 
 gulp.task("jslint", function () {
-  return gulp.src("./script.js")
+  return gulp.src("./javascript/script.js")
   .pipe(jslint({
     browser: true,
     devel: true,
