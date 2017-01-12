@@ -19,7 +19,7 @@ $(".btn").click(function (event) {
   } else if (!re.test($("#inputEmail3").val())) {
     event.preventDefault();
     $("#email-label").parent(".form-group").addClass("has-error");
-    $("#email-label").next(".col-sm-10").append("<span class='error-message'>Please provide a valid email.</span>");
+    $("#email-label").next(".col-sm-10").children(".error-message").remove().append("<span class='error-message'>Please provide a valid email.</span>");
     console.log("#email-label is not formatted like an email");
   }
   console.log("button default clicked");
@@ -60,7 +60,8 @@ $(".btn").click(function (event) {
     if ($("#inputPassword3").val().length < 6) {
       event.preventDefault();
       $("#password-label").parent(".form-group").addClass("has-error");
-      $("#password-label").next(".col-sm-10").append("</span><span class='error-message'>Please type in a password that is longer than five characters.</span>");
+      $("#password-label").next(".col-sm-10").children(".error-message").remove();
+      $("#password-label").next(".col-sm-10").append("<span class='error-message'>Please type in a password that is longer than five characters.</span>");
       console.log("#password-label length less than 6");
     }
     console.log("button default for password input is clicked");
