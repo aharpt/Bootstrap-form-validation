@@ -89,3 +89,14 @@ $("#inputPassword3").blur( function () {
       $("#confirm-password-label").next(".col-sm-10").append("<span class='error-message'>Please type in a matching password.</span>");
     }
   });
+
+  $("#inputPassword3").keyup(function (event) {
+    "use strict";
+    event.preventDefault();
+    if ($("#inputConfirmPassword3").val() !== $("#inputPassword3").val()) {
+      $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-error has-feedback");
+      $("#confirm-password-label").next(".col-sm-10").children("span").remove();
+      $("#confirm-password-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-remove form-control-feedback' aria-hidden='true'></span>");
+      $("#confirm-password-label").next(".col-sm-10").append("<span class='error-message'>Please type in a matching password.</span>");
+    }
+  });
