@@ -11,7 +11,7 @@ var numOfClicks = 0;
 
 $(".btn").click( function (event) {
   "use strict";
-  if (!re.test($("#inputEmail3").val())) {
+  if (!re.test($("#inputEmail").val())) {
     event.preventDefault();
     $("#email-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-error has-feedback");
     $("#email-label").next(".col-sm-10").children(".error-message").remove();
@@ -20,8 +20,8 @@ $(".btn").click( function (event) {
   }
 });
 
-  $("#inputEmail3").blur( function () {
-    if ($("#inputEmail3").val().length > 0 && re.test($("#inputEmail3").val())) {
+  $("#inputEmail").blur( function () {
+    if ($("#inputEmail").val().length > 0 && re.test($("#inputEmail").val())) {
       $("#email-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-success has-feedback");
       $("#email-label").next(".col-sm-10").children("span").remove();
       $("#email-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span>");
@@ -38,7 +38,7 @@ $(".btn").click( function (event) {
 
 $(".btn").click( function (event) {
   "use strict";
-  if ($("#inputPassword3").val().length < 6) {
+  if ($("#inputPassword").val().length < 6) {
     event.preventDefault();
     $("#password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-error has-feedback");
     $("#password-label").next(".col-sm-10").children("span").remove();
@@ -48,9 +48,9 @@ $(".btn").click( function (event) {
 });
 
 
-$("#inputPassword3").blur( function () {
+$("#inputPassword").blur( function () {
   "use strict";
-  if ($("#inputPassword3").val().length > 5) {
+  if ($("#inputPassword").val().length > 5) {
     $("#password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-success has-feedback");
     $("#password-label").next(".col-sm-10").children("span").remove();
     $("#password-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span>");
@@ -67,7 +67,7 @@ $("#inputPassword3").blur( function () {
 
   $(".btn").click( function (event) {
     "use strict";
-    if ($("#inputConfirmPassword3").val() !== $("#inputPassword3").val() || $("#inputPassword3").val().length === 0) {
+    if ($("#inputConfirmPassword").val() !== $("#inputPassword").val() || $("#inputPassword").val().length === 0) {
       event.preventDefault();
       $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-error has-feedback");
       $("#confirm-password-label").next(".col-sm-10").children("span").remove();
@@ -77,8 +77,8 @@ $("#inputPassword3").blur( function () {
     }
   });
 
-  $("#inputConfirmPassword3").blur( function () {
-    if ($("#inputConfirmPassword3").val() === $("#inputPassword3").val() && $("#inputPassword3").val().length > 0) {
+  $("#inputConfirmPassword").blur( function () {
+    if ($("#inputConfirmPassword").val() === $("#inputPassword").val() && $("#inputPassword").val().length > 0) {
       $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-success has-feedback");
       $("#confirm-password-label").next(".col-sm-10").children("span").remove();
       $("#confirm-password-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span>");
@@ -90,13 +90,23 @@ $("#inputPassword3").blur( function () {
     }
   });
 
-  $("#inputPassword3").keyup(function (event) {
+  $("#inputPassword").keyup(function (event) {
     "use strict";
     event.preventDefault();
-    if ($("#inputConfirmPassword3").val() !== $("#inputPassword3").val()) {
+    if ($("#inputConfirmPassword").val() !== $("#inputPassword").val()) {
       $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-error has-feedback");
       $("#confirm-password-label").next(".col-sm-10").children("span").remove();
       $("#confirm-password-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-remove form-control-feedback' aria-hidden='true'></span>");
       $("#confirm-password-label").next(".col-sm-10").append("<span class='error-message'>Please type in a matching password.</span>");
+    }
+  });
+
+  $("#inputConfirmPassword").keyup(function (event) {
+    "use strict";
+    event.preventDefault();
+    if ($("#inputConfirmPassword").val() === $("#inputPassword").val()) {
+      $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-success has-feedback");
+      $("#confirm-password-label").next(".col-sm-10").children("span").remove();
+      $("#confirm-password-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span>");
     }
   });
