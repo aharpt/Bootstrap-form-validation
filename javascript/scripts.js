@@ -9,6 +9,9 @@
 var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 var numOfClicks = 0;
 
+$(function() {
+
+
 $(".btn").click( function (event) {
   "use strict";
   if (!re.test($("#inputEmail").val())) {
@@ -60,4 +63,6 @@ $("#inputPassword").blur( function () {
     $("#password-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-remove form-control-feedback' aria-hidden='true'></span>");
     $("#password-label").next(".col-sm-10").append("<span class='error-message'>Please provide a password that is longer than five characters.</span>");
   }
+});
+
 });
