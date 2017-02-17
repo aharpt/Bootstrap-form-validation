@@ -1,9 +1,7 @@
 // when the button is clicked
-  // if email is not longer than one character throw an error
   // if email is not formatted like an email throw an error
-  // if Password if not longer than six characters throw an error
+  // if Password if not longer than five characters throw an error
 
-// if email is not longer than one character throw an error
 
 // Using a regular expression in JavaScript http://stackoverflow.com/questions/46155/validate-email-address-in-javascript Stack Overflow MIT License
 var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
