@@ -100,3 +100,13 @@ $("#inputPassword3").blur( function () {
       $("#confirm-password-label").next(".col-sm-10").append("<span class='error-message'>Please type in a matching password.</span>");
     }
   });
+
+  $("#inputConfirmPassword3").keyup(function (event) {
+    "use strict";
+    event.preventDefault();
+    if ($("#inputConfirmPassword3").val() === $("#inputPassword3").val()) {
+      $("#confirm-password-label").parent(".form-group").removeClass("has-error has-success has-feedback").addClass("has-success has-feedback");
+      $("#confirm-password-label").next(".col-sm-10").children("span").remove();
+      $("#confirm-password-label").next(".col-sm-10").append("<span class='glyphicon glyphicon-ok form-control-feedback' aria-hidden='true'></span>");
+    }
+  });
